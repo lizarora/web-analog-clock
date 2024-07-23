@@ -1,0 +1,36 @@
+#container{
+    align-items: center;
+    justify-content:center;
+    display: flex;
+    height: 100vh; /*viewport height*/
+    background: #f6f6f6 url(clock.png) no-repeat center;
+    background-size: contain; /*to make sure that the image fits in the screen*/
+    width: 100%;
+    position: relative;
+}
+
+#hour, #minute, #second{
+    position: absolute;
+    background-color: black;
+    border-radius: 10px;
+    transform-origin: bottom center; /*to rotate around the base*/
+    bottom:50%; /*to place the hands at center*/
+}
+
+#hour {
+    width: 1.5%; 
+    height: 21%; 
+    margin-left: 49.2%;
+}
+
+#minute {
+    width: 1%;
+    height: 27%;
+    margin-left: 49.5%;
+}
+
+#second {
+    width: 0.5%;
+    height: 32%;
+    margin-left: 49.8%;
+}
