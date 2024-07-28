@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,24 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
+
 <body>
-    <div id = "container"> </div>
-        <!--A class name can be used by multiple HTML elements, 
+    <div id="screen">
+        <div id="container">
+            <div class="box" id="timezone1">EST</div>
+            <div class="box" id="timezone2">PST</div>
+            <div class="box" id="timezone3">IST</div>
+        </div>
+        <div id="clock">
+            <!--A class name can be used by multiple HTML elements, 
         while an id name must only be used by one HTML element within the page
         in CSS # is used for IDs and . is used for classes-->
-        <div id = "hour"></div>
-        <div id = "minute"></div>
-        <div id = "second"></div>
-    
-    
+            <div id="hour"></div>
+            <div id="minute"></div>
+            <div id="second"></div>
+        </div>
+
+    </div>
 </body>
+
 </html>

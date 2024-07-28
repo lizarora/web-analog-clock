@@ -1,25 +1,42 @@
-#container{
-    align-items: center;
-    justify-content:center;
+body {
+    background-color: #be6161;
+    margin: 0;
+    padding: 0;
     display: flex;
-    height: 100vh; /*viewport height*/
-    background: #f6f6f6 url(clock.png) no-repeat center;
-    background-size: contain; /*to make sure that the image fits in the screen*/
-    width: 100%;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-#hour, #minute, #second{
+#screen {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+#clock {
+    position: relative;
+    height: 48vw;
+    width: 45vw;
+    background: url(clock.png) no-repeat;
+    background-size: 100%;
+}
+
+#hour,
+#minute,
+#second {
     position: absolute;
     background-color: black;
     border-radius: 10px;
-    transform-origin: bottom center; /*to rotate around the base*/
-    bottom:50%; /*to place the hands at center*/
+    transform-origin: bottom center;
+    /*to rotate around the base*/
+    bottom: 50%;
+    /*to place the hands at center*/
 }
 
 #hour {
-    width: 1.5%; 
-    height: 21%; 
+    width: 1.5%;
+    height: 21%;
     margin-left: 49.2%;
 }
 
@@ -33,4 +50,23 @@
     width: 0.5%;
     height: 32%;
     margin-left: 49.8%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+}
+
+.box {
+    width: 10vw;
+    height: 10vh;
+    background-color: white;
+    border: solid;
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
