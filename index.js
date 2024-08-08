@@ -5,9 +5,9 @@ function currentTime() {
 
     let hourDiff = Math.floor(selectedTimeZoneDifference);
     let minDiff = (selectedTimeZoneDifference - hourDiff) *60
-    let hourTime = date.getHours() + hourDiff;
-    let minuteTime = date.getMinutes() + minDiff;
-    let secondTime = date.getSeconds();
+    let hourTime = date.getUTCHours() + hourDiff;
+    let minuteTime = date.getUTCMinutes() + minDiff;
+    let secondTime = date.getUTCSeconds();
 
     if (hourTime >= 24) {
         hourTime -= 24;
@@ -25,17 +25,17 @@ function currentTime() {
 }
 
 document.getElementById('timezone1').addEventListener('click', () => {
-    selectedTimeZoneDifference = 1; // EST 
+    selectedTimeZoneDifference = -4; // EST 
     currentTime();
 });
 
 document.getElementById('timezone2').addEventListener('click', () => {
-    selectedTimeZoneDifference = -2; // PST 
+    selectedTimeZoneDifference = -7; // PST 
     currentTime();
 });
 
 document.getElementById('timezone3').addEventListener('click', () => {
-    selectedTimeZoneDifference = 10.5; // IST 
+    selectedTimeZoneDifference = 5.5; // IST 
     currentTime();
 });
 
